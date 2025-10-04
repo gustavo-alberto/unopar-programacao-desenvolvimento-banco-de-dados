@@ -20,3 +20,11 @@ CREATE TABLE `ContaReceber` (
     PRIMARY KEY (`ID`),
     CONSTRAINT `fk_ContaReceber_Cliente` FOREIGN KEY (`Cliente_ID`) REFERENCES `Cliente` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE `Estado` (
+    `ID` INT NOT NULL AUTO_INCREMENT,
+    `Nome` VARCHAR(50) NOT NULL,
+    `UF` CHAR(2) NOT NULL,
+    PRIMARY KEY (`ID`),
+    UNIQUE KEY `UK_Estado_UF` (`UF`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
