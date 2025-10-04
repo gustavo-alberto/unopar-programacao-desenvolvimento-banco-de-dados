@@ -7,4 +7,4 @@ CREATE TABLE `Cliente` (
     `EndNumero` VARCHAR(10) NOT NULL,
     PRIMARY KEY (`ID`),
     UNIQUE KEY `UK_Cliente_CPF` (`CPF`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
